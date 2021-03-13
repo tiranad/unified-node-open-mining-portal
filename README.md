@@ -2,14 +2,13 @@
 
 #### Unified NOMP
 
+Updated with support for new Dash >= 13.1 with embedded multi,  support for DraftCoinZ. additions to embedded node-merged-pool for Masternode support.
+
 This repo will serve as an open source multipool. Multipool capabilities are in alpha testing in this version. This will give the ability to utilize NOMP with merged capabilities but NO merged coin payouts. *ONLY* the main chain coins will payout and calculate correctly at the moment.
 
 This portal is an extremely efficient, highly scalable, all-in-one, easy to setup cryptocurrency mining pool written in Node.js. 
 It contains a merged stratum pool server; reward/payment/share processor for multipooling; and an (*in progress*)
 responsive user-friendly front-end website featuring mining instructions, in-depth live statistics, and an admin center.
-
-A custom setup can be purchased at:
-https://www.fiverr.com/ahmedbodi/setup-a-cryptocurrency-mining-pool
 
 #### Production Usage Notice - Do it with caution!
 This is beta software. All of the following are things that can change and break an existing setup: functionality of any feature,
@@ -39,8 +38,8 @@ production usage because it can and ~~often~~ will break your setup and require 
 
 ### Features
 
-* For the pool server it uses the highly efficient [node-merged-pool](//github.com/sigwo/node-merged-pool) module which
-supports vardiff, POW & POS, transaction messages, anti-DDoS, IP banning, [several hashing algorithms](//github.com/sigwo/node-merged-pool#hashing-algorithms-supported).
+* For the pool server it uses the highly efficient [node-merged-pool](//github.com/tiranad/node-merged-pool) module which
+supports vardiff, POW & POS, transaction messages, anti-DDoS, IP banning, [several hashing algorithms](//github.com/tiranad/node-merged-pool#hashing-algorithms-supported).
 
 * This implementation is [merged mining capable](https://en.bitcoin.it/wiki/Merged_mining_specification). You may add AUXPoW coins to the main chain configurations. 
 At this point, the merged coins do everything EXCEPT display on the site or payout automatically. Shares, blocks, and coinbase transactions complete as planned.
@@ -58,9 +57,9 @@ current round so that each and every share will be rewarded.
 
 * Coin-switching ports using coin-networks and crypto-exchange APIs to detect profitability. 
 
-* Past MPOS functionality is no longer maintained, althought it is working for now.
+* MPOS functionality is minimally maintained, albeit it is working for now.
  
-* Basic multipooling features included, but *NOT* enabled by default. You must follow the [README](//github.com/sigwo/unified-node-open-mining-portal/blob/master/multipool/README) in the [multipool](//github.com/sigwo/unified-node-open-mining-portal/blob/master/multipool) folder. More updates *WILL* happen in the multipool options and will stay open source.
+* Basic multipooling features included, but *NOT* enabled by default. You must follow the [README](//github.com/tiranad/unified-node-open-mining-portal/blob/master/multipool/README) in the [multipool](//github.com/tiranad/unified-node-open-mining-portal/blob/master/multipool) folder. More updates *WILL* happen in the multipool options and will stay open source.
 
 #### Attack Mitigation
 * Detects and thwarts socket flooding (garbage data sent over socket in order to consume system resources).
@@ -342,7 +341,7 @@ Here is an example of the required fields:
 ````
 
 For additional documentation how to configure coins and their different algorithms
-see [these instructions](//github.com/sigwo/node-merged-pool#module-usage).
+see [these instructions](//github.com/tiranad/node-merged-pool#module-usage).
 
 
 ##### Pool config
@@ -461,7 +460,7 @@ Description of options:
 You can create as many of these pool config files as you want (such as one pool per coin you which to operate).
 If you are creating multiple pools, ensure that they have unique stratum ports.
 
-For more information on these configuration options see the [pool module documentation](https://github.com/UNOMP/node-merged-pool#module-usage)
+For more information on these configuration options see the [pool module documentation](https://github.com/tiranad/node-merged-pool#module-usage)
 
 
 
@@ -508,12 +507,9 @@ Donations
 ---------
 Below is my donation address. The original [credits](//github.com/sigwo/unified-node-open-mining-portal/blob/master/CREDITS.md) are listed here because I felt scammy if I totally removed them. They no longer are supporting the current development effort. Please donate to:
 
-* BTC: `19svwpxWAhD4zsfeEnnxExZgnQ46A3mrt3`
+* BTC: `bc1qau7u8hwsle24xues43fnd6prpl09srzkh39qfy`
 
 Donors (email me to be added):
-* [elitemobb from altnuts.com](http://altnuts.com)
-* [mike from minerpools.com](https://minerpools.com)
-* [gentamicin from themultipool.com](http://themultipool.com)
 
 [Credits](//github.com/sigwo/unified-node-open-mining-portal/blob/master/CREDITS.md)
 -------
